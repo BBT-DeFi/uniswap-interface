@@ -35,7 +35,7 @@ const AppWrapper = styled.div`
   flex-flow: column;
   align-items: flex-start;
 `
-
+ 
 const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
