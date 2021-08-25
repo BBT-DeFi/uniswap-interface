@@ -6,6 +6,8 @@ export interface Colors {
   white: Color
   black: Color
 
+  bbtColor: Color
+  
   // text
   text1: Color
   text2: Color

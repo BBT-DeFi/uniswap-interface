@@ -41,6 +41,8 @@ function colors(darkMode: boolean): Colors {
     white,
     black,
 
+    bbtColor: darkMode ? '#02D767' : '#02D767',
+
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#C3C5CB' : '#565A69',
