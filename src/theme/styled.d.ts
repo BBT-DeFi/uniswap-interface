@@ -7,7 +7,7 @@ export interface Colors {
   black: Color
 
   bbtColor: Color
-  
+
   // text
   text1: Color
   text2: Color
@@ -23,6 +23,8 @@ export interface Colors {
   bg4: Color
   bg5: Color
   bg6: Color
+  bgColor: Color
+  bbtGrandient: Color
 
   modalBG: Color
   advancedBG: Color
@@ -33,8 +35,10 @@ export interface Colors {
   primary3: Color
   primary4: Color
   primary5: Color
+  bbtbutton: Color
 
   primaryText1: Color
+  bbtText: Color
 
   // pinks
   secondary1: Color
