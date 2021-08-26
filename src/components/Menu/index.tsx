@@ -167,7 +167,7 @@ const ToggleMenuItem = styled.button`
   }
 `
 
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
+const CODE_LINK = 'https://github.com/BBT-DeFi/uniswap-interface.git'
 
 function LanguageMenuItem({ locale, active, key }: { locale: SupportedLocale; active: boolean; key: string }) {
   const { to, onClick } = useLocationLinkProps(locale)
@@ -238,7 +238,7 @@ export default function Menu() {
                     </div>
                     <Info opacity={0.6} size={16} />
                   </MenuItem>
-                  <MenuItem href="https://docs.uniswap.org/">
+                  <MenuItem href="https://mungkorn-thanakiat.gitbook.io/bbt-swap">
                     <div>
                       <Trans>Docs</Trans>
                     </div>
@@ -250,18 +250,18 @@ export default function Menu() {
                     </div>
                     <Code opacity={0.6} size={16} />
                   </MenuItem>
-                  <MenuItem href="https://discord.gg/FCfyBSbCU5">
+                  {/* <MenuItem href="https://discord.gg/FCfyBSbCU5">
                     <div>
                       <Trans>Discord</Trans>
                     </div>
                     <MessageCircle opacity={0.6} size={16} />
-                  </MenuItem>
-                  <MenuItem href={infoLink}>
+                  </MenuItem> */}
+                  {/* <MenuItem href={infoLink}>
                     <div>
                       <Trans>Analytics</Trans>
                     </div>
                     <PieChart opacity={0.6} size={16} />
-                  </MenuItem>
+                  </MenuItem> */}
                   <ToggleMenuItem onClick={() => setMenu('lang')}>
                     <div>
                       <Trans>Language</Trans>
