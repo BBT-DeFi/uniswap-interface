@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 import { Box } from 'rebass/styled-components'
 
-const Card = styled(Box) <{ width?: string; padding?: string; border?: string; $borderRadius?: string }>`
+const Card = styled(Box)<{ width?: string; padding?: string; border?: string; $borderRadius?: string }>`
   width: ${({ width }) => width ?? '100%'};
   padding: ${({ padding }) => padding ?? '1rem'};
   border-radius: ${({ $borderRadius }) => $borderRadius ?? '16px'};

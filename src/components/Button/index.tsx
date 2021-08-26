@@ -8,14 +8,14 @@ import useTheme from 'hooks/useTheme'
 
 type ButtonProps = Omit<ButtonPropsOriginal, 'css'>
 
-const Base = styled(RebassButton) <
+const Base = styled(RebassButton)<
   {
     padding?: string
     width?: string
     $borderRadius?: string
     altDisabledStyle?: boolean
   } & ButtonProps
-  >`
+>`
   padding: ${({ padding }) => padding ?? '16px'};
   width: ${({ width }) => width ?? '100%'};
   font-weight: 500;
@@ -66,7 +66,7 @@ export const ButtonPrimary = styled(Base)`
   }
   &:disabled {
     background-color: ${({ theme, altDisabledStyle, disabled }) =>
-    altDisabledStyle ? (disabled ? theme.bbtColor : theme.bg2) : theme.bg2};
+      altDisabledStyle ? (disabled ? theme.bbtColor : theme.bg2) : theme.bg2};
     color: ${({ theme }) => theme.white};
     cursor: auto;
     box-shadow: none;
