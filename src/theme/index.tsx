@@ -68,16 +68,16 @@ function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#2172E5' : '#02D767',
+    primary1: darkMode ? '#02D767' : '#02D767',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#FF99C9',
     primary4: darkMode ? '#376bad70' : '#F6DDE8',
     primary5: darkMode ? '#153d6f70' : '#FDEAF1',
-    bbtbutton: darkMode ? '#153d6f70' : '#02D767',
+    bbtbutton: darkMode ? '#02D767' : '#02D767',
 
     // color text
     primaryText1: darkMode ? '#5090ea' : '#D50066',
-    bbtText: darkMode ? '#02D767' : '#FFFFFF',
+    bbtText: darkMode ? '#FFFFFF' : '#FFFFFF',
 
     // secondary colors
     secondary1: darkMode ? '#2172E5' : '#E8006F',
