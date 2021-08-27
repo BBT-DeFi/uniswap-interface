@@ -22,12 +22,7 @@ const CTASection = styled.section`
 
 const CTA1 = styled(ExternalLink)`
   background-color: ${({ theme }) => theme.bg2};
-  background: radial-gradient(
-      92.78% 103.09% at 50.06% 7.22%,
-      rgba(255, 58, 212, 0.072) 0%,
-      rgba(255, 255, 255, 0.042) 100%
-    ),
-    radial-gradient(100% 97.16% at 0% 12.22%, rgba(235, 0, 255, 0.2) 0%, rgba(243, 19, 19, 0.2) 100%);
+  background: radial-gradient(100% 100% at 100% 100%, rgba(2, 215, 103, 50) 0%, rgba(2, 215, 103, 50) 100%);
   padding: 2rem;
   border-radius: 20px;
   display: flex;
@@ -37,18 +32,14 @@ const CTA1 = styled(ExternalLink)`
   align-items: center;
   overflow: hidden;
   border: 1px solid transparent;
+  text-decoration: none !important;
 
   * {
-    color: ${({ theme }) => theme.text1};
-    text-decoration: none !important;
+    color: ${({ theme }) => theme.white};
   }
 
   :hover {
     border: 1px solid ${({ theme }) => theme.bg0};
-    text-decoration: none;
-    * {
-      text-decoration: none !important;
-    }
   }
 
   :before {
@@ -74,18 +65,16 @@ const CTA2 = styled(ExternalLink)`
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid transparent;
+  text-decoration: none !important;
+  overflow: hidden;
+  background: radial-gradient(100% 100% at 100% 100%, rgba(2, 215, 103, 50) 0%, rgba(2, 215, 103, 50) 100%);
 
   * {
-    color: ${({ theme }) => theme.text1};
-    text-decoration: none !important;
+    color: ${({ theme }) => theme.white};
   }
 
   :hover {
     border: 1px solid ${({ theme }) => theme.bg0};
-    text-decoration: none !important;
-    * {
-      text-decoration: none !important;
-    }
   }
 
   :before {
@@ -95,9 +84,8 @@ const CTA2 = styled(ExternalLink)`
     height: 280%;
     top: -170%;
     left: -134%;
-    opacity: 0.4;
     z-index: -1;
-    background: url(${Texture}) 0 0 repeat;
+    background-color: ${({ theme }) => theme.bg2};
     transform: rotate(-4deg);
   }
 `
@@ -130,7 +118,7 @@ export default function CTACards() {
     <div>
       <MinimalNetworkAlert />
       <CTASection>
-        <CTA1 href={'https://help.uniswap.org/en/articles/5391541-providing-liquidity-on-uniswap-v3'}>
+        <CTA1 href={''}>
           <ResponsiveColumn>
             <HeaderText>
               <Trans>Learn about providing liquidity</Trans> ↗
@@ -140,7 +128,7 @@ export default function CTACards() {
             </TYPE.body>
           </ResponsiveColumn>
         </CTA1>
-        <CTA2 href={infoLink + 'pools'}>
+        <CTA2 href={''}>
           <ResponsiveColumn>
             <HeaderText style={{ alignSelf: 'flex-start' }}>
               <Trans>Top pools</Trans> ↗
