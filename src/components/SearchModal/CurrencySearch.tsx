@@ -79,6 +79,7 @@ export function CurrencySearch({
 
   const [invertSearchOrder] = useState<boolean>(false)
 
+  //show select token in swap page
   const allTokens = useAllTokens()
 
   // if they input an address, use it

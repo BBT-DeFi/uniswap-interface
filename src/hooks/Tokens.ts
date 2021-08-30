@@ -52,7 +52,8 @@ function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean):
 }
 
 export function useAllTokens(): { [address: string]: Token } {
-  const allTokens = useCombinedActiveList()
+  const allTokens = useCombinedActiveList() //show select token in swap page
+  console.log({ allTokens })
   return useTokensFromMap(allTokens, true)
 }
 

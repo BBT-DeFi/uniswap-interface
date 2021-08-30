@@ -7,6 +7,7 @@ const CMC_STABLECOIN = 'stablecoin.cmc.eth'
 const COINGECKO_LIST = 'https://tokens.coingecko.com/uniswap/all.json'
 const COMPOUND_LIST = 'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json'
 const GEMINI_LIST = 'https://www.gemini.com/uniswap/manifest.json'
+const BBDT_LIST = 'https://thanakiat-gusgus.github.io/bbt-api/bbt-sample.json'
 const KLEROS_LIST = 't2crtokens.eth'
 export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json'
 const ROLL_LIST = 'https://app.tryroll.com/tokens.json'
@@ -28,7 +29,8 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   COINGECKO_LIST,
   KLEROS_LIST,
   OPTIMISM_LIST,
-  GEMINI_LIST,
+  BBDT_LIST,
+
   ...UNSUPPORTED_LIST_URLS, // need to load unsupported tokens as well
 ]
 

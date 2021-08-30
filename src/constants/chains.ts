@@ -8,6 +8,7 @@ export enum SupportedChainId {
   GOERLI = 5,
   KOVAN = 42,
 
+  BITKUB_CHAIN_TESTNET = 25925,
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,
   OPTIMISM = 10,
@@ -21,6 +22,7 @@ export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
 
+  SupportedChainId.BITKUB_CHAIN_TESTNET,
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.ARBITRUM_RINKEBY,
   SupportedChainId.OPTIMISM,
@@ -28,6 +30,7 @@ export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
 ]
 
 export const L1_CHAIN_IDS = [
+  SupportedChainId.BITKUB_CHAIN_TESTNET,
   SupportedChainId.MAINNET,
   SupportedChainId.ROPSTEN,
   SupportedChainId.RINKEBY,
@@ -63,6 +66,12 @@ type ChainInfo = { readonly [chainId: number]: L1ChainInfo | L2ChainInfo } & {
   { readonly [chainId in SupportedL1ChainId]: L1ChainInfo }
 
 export const CHAIN_INFO: ChainInfo = {
+  [SupportedChainId.BITKUB_CHAIN_TESTNET]: {
+    docs: 'https://offchainlabs.com/',
+    explorer: 'https://explorer.arbitrum.io/',
+    infoLink: 'https://info.uniswap.org/#/arbitrum',
+    label: 'Bitkub Chain Testnet',
+  },
   [SupportedChainId.ARBITRUM_ONE]: {
     bridge: 'https://bridge.arbitrum.io/',
     docs: 'https://offchainlabs.com/',
