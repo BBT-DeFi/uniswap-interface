@@ -232,10 +232,10 @@ export function CurrencySearch({
         <Row justify="center">
           <ButtonText onClick={showManageView} color={theme.primary1} className="list-token-manage-button">
             <RowFixed>
-              <IconWrapper size="16px" marginRight="6px" stroke={theme.primaryText1}>
+              <IconWrapper size="16px" marginRight="6px" stroke={theme.bbtText}>
                 <Edit />
               </IconWrapper>
-              <TYPE.main color={theme.primaryText1}>
+              <TYPE.main color={theme.bbtText}>
                 <Trans>Manage Token Lists</Trans>
               </TYPE.main>
             </RowFixed>

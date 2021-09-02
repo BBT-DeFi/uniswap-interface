@@ -4331,6 +4331,10 @@
   resolved "https://registry.npmjs.org/@uniswap/default-token-list/-/default-token-list-2.0.0.tgz"
   integrity sha512-P37PqBtUjEB9DIRFfmEsgougkV0555JQKiGPISeN9UFk1UgCQM5sg6+bBaShiyaqEpdtttAaBFI1QESCzPGvXw==
 
+"@uniswap/default-token-list@https://github.com/BBT-DeFi/default-token-list.git":
+  version "2.0.0"
+  resolved "https://github.com/BBT-DeFi/default-token-list.git#fadc01d05c95ca56aee84fc9f3fb9eb97f8dab10"
+
 "@uniswap/governance@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npmjs.org/@uniswap/governance/-/governance-1.0.2.tgz"
