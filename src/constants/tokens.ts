@@ -119,7 +119,7 @@ export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   ...WETH9,
   [SupportedChainId.BITKUB_CHAIN_TESTNET]: new Token(
     SupportedChainId.BITKUB_CHAIN_TESTNET,
-    '0x4200000000000000000000000000000000000006',
+    '0xb720010f218A25BdBaf478C097A17fc6cf15F95F',
     18,
     'WETH',
     'Wrapped Ether'
