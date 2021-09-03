@@ -34,6 +34,7 @@ import {
   uk,
   vi,
   zh,
+  th,
   PluralCategory,
 } from 'make-plural/plurals'
 
@@ -73,6 +74,7 @@ const plurals: LocalePlural = {
   'vi-VN': vi,
   'zh-CN': zh,
   'zh-TW': zh,
+  'th-TH': th,
 }
 
 async function dynamicActivate(locale: SupportedLocale) {

@@ -31,6 +31,7 @@ export const SUPPORTED_LOCALES = [
   'vi-VN',
   'zh-CN',
   'zh-TW',
+  'th-TH',
 ] as const
 export type SupportedLocale = typeof SUPPORTED_LOCALES[number]
 
@@ -68,4 +69,5 @@ export const LOCALE_LABEL: { [locale in SupportedLocale]: string } = {
   'vi-VN': 'Tiếng Việt',
   'zh-CN': '简体中文',
   'zh-TW': '繁体中文',
+  'th-TH': 'Thailand',
 }
