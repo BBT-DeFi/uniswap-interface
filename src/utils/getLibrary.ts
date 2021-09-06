@@ -3,6 +3,7 @@ import ms from 'ms.macro'
 import { SupportedChainId } from '../constants/chains'
 
 const NETWORK_POLLING_INTERVALS: { [chainId: number]: number } = {
+  [SupportedChainId.BITKUB_CHAIN_TESTNET]: ms`1s`,
   [SupportedChainId.ARBITRUM_ONE]: ms`1s`,
   [SupportedChainId.ARBITRUM_RINKEBY]: ms`1s`,
   [SupportedChainId.OPTIMISM]: ms`1s`,

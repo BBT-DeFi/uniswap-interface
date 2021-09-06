@@ -27,6 +27,5 @@ export default function chunkArray<T>(items: T[], gasLimit = CONSERVATIVE_BLOCK_
     }
   }
   if (currentChunk.length > 0) chunks.push(currentChunk)
-
   return chunks
 }

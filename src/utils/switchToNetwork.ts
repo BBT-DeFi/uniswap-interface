@@ -10,6 +10,7 @@ interface SwitchNetworkArguments {
 // provider.request returns Promise<any>, but wallet_switchEthereumChain must return null or throw
 // see https://github.com/rekmarks/EIPs/blob/3326-create/EIPS/eip-3326.md for more info on wallet_switchEthereumChain
 export async function switchToNetwork({ library, chainId }: SwitchNetworkArguments): Promise<null | void> {
+  console.log(library.provider)
   if (!library?.provider?.request) {
     return
   }

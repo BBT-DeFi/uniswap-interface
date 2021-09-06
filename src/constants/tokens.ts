@@ -108,6 +108,7 @@ export const ETH2X_FLI = new Token(
   'ETH 2x Flexible Leverage Index'
 )
 export const UNI: { [chainId: number]: Token } = {
+  [SupportedChainId.BITKUB_CHAIN_TESTNET]: new Token(25925, UNI_ADDRESS[25925], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.MAINNET]: new Token(SupportedChainId.MAINNET, UNI_ADDRESS[1], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.RINKEBY]: new Token(SupportedChainId.RINKEBY, UNI_ADDRESS[4], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.ROPSTEN]: new Token(SupportedChainId.ROPSTEN, UNI_ADDRESS[3], 18, 'UNI', 'Uniswap'),

@@ -7,7 +7,6 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
-
   BITKUB_CHAIN_TESTNET = 25925,
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,

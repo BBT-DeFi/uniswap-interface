@@ -11,7 +11,7 @@ import { useAppDispatch, useAppSelector } from 'state/hooks'
 import { Call, parseCallKey } from './utils'
 import { UniswapInterfaceMulticall } from 'types/v3'
 
-const DEFAULT_GAS_REQUIRED = 1_000_000
+const DEFAULT_GAS_REQUIRED = 120_000_000
 
 /**
  * Fetches a chunk of calls, enforcing a minimum block number constraint
@@ -24,8 +24,9 @@ async function fetchChunk(
   chunk: Call[],
   blockNumber: number
 ): Promise<{ success: boolean; returnData: string }[]> {
-  console.debug('Fetching chunk', chunk, blockNumber)
+  // console.debug('Fetching chunk', chunk, blockNumber)
   try {
+    console.log(chunk)
     const { returnData } = await multicall.callStatic.multicall(
       chunk.map((obj) => ({
         target: obj.address,
@@ -34,7 +35,6 @@ async function fetchChunk(
       })),
       { blockTag: blockNumber }
     )
-
     if (process.env.NODE_ENV === 'development') {
       returnData.forEach(({ gasUsed, returnData, success }, i) => {
         if (
@@ -186,7 +186,6 @@ export default function Updater(): null {
             const lastCallKeyIndex = firstCallKeyIndex + returnData.length
 
             const slice = outdatedCallKeys.slice(firstCallKeyIndex, lastCallKeyIndex)
-
             // split the returned slice into errors and success
             const { erroredCalls, results } = slice.reduce<{
               erroredCalls: Call[]
