@@ -25,16 +25,23 @@ async function fetchChunk(
   blockNumber: number
 ): Promise<{ success: boolean; returnData: string }[]> {
   console.debug('Fetching chunk', chunk, blockNumber)
+  console.log(chunk)
+  console.log(blockNumber)
   try {
     const { returnData } = await multicall.callStatic.multicall(
-      chunk.map((obj) => ({
-        target: obj.address,
-        callData: obj.callData,
-        gasLimit: obj.gasRequired ?? DEFAULT_GAS_REQUIRED,
-      })),
+      chunk.map(
+        (obj) => (
+          console.log(obj),
+          {
+            target: obj.address,
+            callData: obj.callData,
+            gasLimit: obj.gasRequired ?? DEFAULT_GAS_REQUIRED,
+          }
+        )
+      ),
       { blockTag: blockNumber }
     )
-
+    console.log('pass')
     if (process.env.NODE_ENV === 'development') {
       returnData.forEach(({ gasUsed, returnData, success }, i) => {
         if (
@@ -54,10 +61,11 @@ async function fetchChunk(
 
     return returnData
   } catch (error) {
+    console.log('x')
     if (error.code === -32000 || error.message?.indexOf('header not found') !== -1) {
       throw new RetryableError(`header not found for block number ${blockNumber}`)
     }
-    console.error('Failed to fetch chunk', error)
+    console.error('Failed to fetch chunk eiei', error)
     throw error
   }
 }

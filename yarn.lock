@@ -4326,11 +4326,6 @@
     "@typescript-eslint/types" "4.28.2"
     eslint-visitor-keys "^2.0.0"
 
-"@uniswap/default-token-list@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@uniswap/default-token-list/-/default-token-list-2.0.0.tgz"
-  integrity sha512-P37PqBtUjEB9DIRFfmEsgougkV0555JQKiGPISeN9UFk1UgCQM5sg6+bBaShiyaqEpdtttAaBFI1QESCzPGvXw==
-
 "@uniswap/default-token-list@https://github.com/BBT-DeFi/default-token-list.git":
   version "2.0.0"
   resolved "https://github.com/BBT-DeFi/default-token-list.git#fadc01d05c95ca56aee84fc9f3fb9eb97f8dab10"
@@ -4362,10 +4357,20 @@
   resolved "https://registry.npmjs.org/@uniswap/merkle-distributor/-/merkle-distributor-1.0.1.tgz"
   integrity sha512-5gDiTI5hrXIh5UWTrxKYjw30QQDnpl8ckDSpefldNenDlYO1RKkdUYMYpvrqGi2r7YzLYTlO6+TDlNs6O7hDRw==
 
-"@uniswap/sdk-core@^3.0.0-alpha.3", "@uniswap/sdk-core@^3.0.1", "@uniswap/sdk-core@https://github.com/BBT-DeFi/uniswap-sdk-core.git#rebuild":
+"@uniswap/sdk-core@^3.0.0-alpha.3", "@uniswap/sdk-core@^3.0.1":
   version "3.0.1"
-  uid a4fbb572e594c917b53a212bad941fa671562d55
   resolved "https://github.com/BBT-DeFi/uniswap-sdk-core.git#a4fbb572e594c917b53a212bad941fa671562d55"
+  dependencies:
+    "@ethersproject/address" "^5.0.2"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    toformat "^2.0.0"
+
+"@uniswap/sdk-core@https://github.com/BBT-DeFi/uniswap-sdk-core.git#rebuild":
+  version "3.0.1"
+  resolved "https://github.com/BBT-DeFi/uniswap-sdk-core.git#17a3977782df933ac944b68bfbde0e253faac182"
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"

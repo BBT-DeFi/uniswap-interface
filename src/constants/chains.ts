@@ -68,7 +68,7 @@ type ChainInfo = { readonly [chainId: number]: L1ChainInfo | L2ChainInfo } & {
 export const CHAIN_INFO: ChainInfo = {
   [SupportedChainId.BITKUB_CHAIN_TESTNET]: {
     docs: 'https://developers.bitkubchain.com/',
-    explorer: 'https://bkcscan.com/',
+    explorer: 'https://testnet.bkcscan.com/',
     infoLink: 'https://www.bitkubchain.com/',
     label: 'Bitkub Chain Testnet',
   },
