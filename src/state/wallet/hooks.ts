@@ -123,6 +123,7 @@ export function useCurrencyBalances(
   const tokenBalances = useTokenBalances(account, tokens)
   const containsETH: boolean = useMemo(() => currencies?.some((currency) => currency?.isNative) ?? false, [currencies])
   const ethBalance = useETHBalances(containsETH ? [account] : [])
+  // console.log(ethBalance)
 
   return useMemo(
     () =>

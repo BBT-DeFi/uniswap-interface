@@ -67,9 +67,9 @@ type ChainInfo = { readonly [chainId: number]: L1ChainInfo | L2ChainInfo } & {
 
 export const CHAIN_INFO: ChainInfo = {
   [SupportedChainId.BITKUB_CHAIN_TESTNET]: {
-    docs: 'https://offchainlabs.com/',
-    explorer: 'https://explorer.arbitrum.io/',
-    infoLink: 'https://info.uniswap.org/#/arbitrum',
+    docs: 'https://developers.bitkubchain.com/',
+    explorer: 'https://testnet.bkcscan.com/',
+    infoLink: 'https://www.bitkubchain.com/',
     label: 'Bitkub Chain Testnet',
   },
   [SupportedChainId.ARBITRUM_ONE]: {

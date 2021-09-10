@@ -11,6 +11,7 @@ export const MULTICALL_ADDRESS: AddressMap = {
   [SupportedChainId.OPTIMISM]: '0x90f872b3d8f33f305e0250db6A2761B354f7710A',
   [SupportedChainId.ARBITRUM_ONE]: '0xadF885960B47eA2CD9B55E6DAc6B42b7Cb2806dB',
   [SupportedChainId.ARBITRUM_RINKEBY]: '0xa501c031958F579dB7676fF1CE78AD305794d579',
+  [SupportedChainId.BITKUB_CHAIN_TESTNET]: '0x9fa2B84d02DEBe049B8319FC00D90DA2B447A163',
 }
 export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
 export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D')
@@ -37,6 +38,7 @@ export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
   [SupportedChainId.MAINNET]: '0xeca4B0bDBf7c55E9b7925919d03CbF8Dc82537E8',
 }
 export const V3_CORE_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V3_FACTORY_ADDRESS, [
+  SupportedChainId.BITKUB_CHAIN_TESTNET,
   SupportedChainId.OPTIMISM,
   SupportedChainId.OPTIMISTIC_KOVAN,
   SupportedChainId.ARBITRUM_ONE,
@@ -49,8 +51,9 @@ export const QUOTER_ADDRESSES: AddressMap = constructSameAddressMap('0xb27308f9F
   SupportedChainId.ARBITRUM_RINKEBY,
 ])
 export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = constructSameAddressMap(
-  '0xC36442b4a4522E871399CD717aBDD847Ab11FE88',
+  '0xe295f0314113Ea84E19b33641C38274295dB0A87',
   [
+    SupportedChainId.BITKUB_CHAIN_TESTNET,
     SupportedChainId.OPTIMISM,
     SupportedChainId.OPTIMISTIC_KOVAN,
     SupportedChainId.ARBITRUM_ONE,
