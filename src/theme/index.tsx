@@ -77,7 +77,7 @@ function colors(darkMode: boolean): Colors {
 
     // color text
     primaryText1: darkMode ? '#5090ea' : '#D50066',
-    bbtText: darkMode ? '#02D767' : '#02D767',
+    bbtText: darkMode ? '#FFFFFF' : '#FFFFFF',
 
     // secondary colors
     secondary1: darkMode ? '#2172E5' : '#E8006F',
