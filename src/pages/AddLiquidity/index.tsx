@@ -267,7 +267,6 @@ export default function AddLiquidity({
     if (!positionManager || !baseCurrency || !quoteCurrency) {
       return
     }
-
     if (position && account && deadline) {
       const useNative = baseCurrency.isNative ? baseCurrency : quoteCurrency.isNative ? quoteCurrency : undefined
       const { calldata, value } =
@@ -291,7 +290,7 @@ export default function AddLiquidity({
         data: calldata,
         value,
       }
-
+      console.log({ txn })
       if (argentWalletContract) {
         const amountA = parsedAmounts[Field.CURRENCY_A]
         const amountB = parsedAmounts[Field.CURRENCY_B]
@@ -315,7 +314,6 @@ export default function AddLiquidity({
           value: '0x0',
         }
       }
-
       setAttemptingTxn(true)
 
       library
@@ -326,7 +324,6 @@ export default function AddLiquidity({
             ...txn,
             gasLimit: calculateGasMargin(chainId, estimate),
           }
-
           return library
             .getSigner()
             .sendTransaction(newTxn)
@@ -346,7 +343,7 @@ export default function AddLiquidity({
             })
         })
         .catch((error) => {
-          console.error('Failed to send transaction', error)
+          console.error('Failed to send transaction eiei', error)
           setAttemptingTxn(false)
           // we only care if the error is something _other_ than the user rejected the tx
           if (error?.code !== 4001) {
